@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.linode.com/
+    body:
+      encoding: UTF-8
+      string: api_key=...&api_action=domain.list&api_responseFormat=json
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 13 Apr 2015 20:25:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Tiger Blood
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"ERRORARRAY":[],"DATA":[{"DOMAINID":677842,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"40winks.org","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":630440,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"bensmitharchitecture.com","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":669098,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"dizajnerice.com","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":687423,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"veljko@floatingpoint.io","TTL_SEC":0,"DOMAIN":"floatingpoint.io","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":664997,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"kulturforum-zagreb.org","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":337042,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"veljko@kset.org","TTL_SEC":0,"DOMAIN":"onoxo.net","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":641966,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"platforma-kooperativa.org","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":281883,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"veljko@kset.org","TTL_SEC":0,"DOMAIN":"radio-taksi-zagreb.hr","TYPE":"master","AXFR_IPS":"\"none\";"},{"DOMAINID":575221,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"tailormade.works","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":489426,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"veljko@kset.org","TTL_SEC":0,"DOMAIN":"tendency.io","TYPE":"master","AXFR_IPS":"none"},{"DOMAINID":658203,"DESCRIPTION":"","EXPIRE_SEC":0,"RETRY_SEC":0,"STATUS":1,"LPM_DISPLAYGROUP":"","MASTER_IPS":"","REFRESH_SEC":0,"SOA_EMAIL":"vedran.kolac@gmail.com","TTL_SEC":0,"DOMAIN":"wedmeindubrovnik.com","TYPE":"master","AXFR_IPS":"none"}],"ACTION":"domain.list"}'
+    http_version:
+  recorded_at: Mon, 13 Apr 2015 20:25:25 GMT
+- request:
+    method: post
+    uri: https://api.linode.com/
+    body:
+      encoding: UTF-8
+      string: api_key=ALjn3d54rvfzqWI4F1YScflIRlLgmo8XPiQAGVmPJsPoakP2a3IXQfx4SYlfAaJr&api_action=domain.resource.list&api_responseFormat=json&DomainId=687423
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 13 Apr 2015 20:25:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Tiger Blood
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"ERRORARRAY":[],"DATA":[{"DOMAINID":687423,"PORT":80,"RESOURCEID":5073588,"NAME":"","WEIGHT":5,"TTL_SEC":0,"TARGET":"178.62.198.200","PRIORITY":10,"PROTOCOL":"","TYPE":"a"},{"DOMAINID":687423,"PORT":80,"RESOURCEID":5073641,"NAME":"foo","WEIGHT":5,"TTL_SEC":0,"TARGET":"127.0.0.1","PRIORITY":10,"PROTOCOL":"","TYPE":"A"}],"ACTION":"domain.resource.list"}'
+    http_version:
+  recorded_at: Mon, 13 Apr 2015 20:25:25 GMT
+recorded_with: VCR 2.9.3

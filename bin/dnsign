@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'dnsign'
+
+def config
+  @config ||= Dnsign::ConfigLoader.parse_and_load ARGV
+end
+
+def dns_service
+  @dns_service ||= Dnsign::DnsService.create_from_name config[:dns_service], access_token: config[:dns_token]
+rescue Dnsign::Error::UnsupportedDnsService => e
+  puts e
+  exit(1)
+end
+
+loop = Dnsign::ResolveUpdateLoop.new(config[:domain], dns_service, Dnsign::IpResolver.new, config)
+loop.update # don't wait for the first tick
+loop.kickoff

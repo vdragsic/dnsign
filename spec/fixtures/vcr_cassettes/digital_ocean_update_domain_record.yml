@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/domains/floatingpoint.io/records
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ...
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 16 Apr 2015 19:29:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df01ae98350a0aa7920da8d212da6e7311429212560; expires=Fri, 15-Apr-16
+        19:29:20 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4999'
+      Ratelimit-Reset:
+      - '1429216160'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ccf97b83-481c-4cd1-bac0-3bf5e8c89d10
+      X-Runtime:
+      - '0.137237'
+      Cf-Ray:
+      - 1d824c65923b0557-VIE
+    body:
+      encoding: UTF-8
+      string: '{"domain_records":[{"id":1851008,"type":"NS","name":"@","data":"ns1.digitalocean.com","priority":null,"port":null,"weight":null},{"id":1851009,"type":"NS","name":"@","data":"ns2.digitalocean.com","priority":null,"port":null,"weight":null},{"id":1851010,"type":"NS","name":"@","data":"ns3.digitalocean.com","priority":null,"port":null,"weight":null},{"id":1851925,"type":"A","name":"@","data":"178.62.198.200","priority":null,"port":null,"weight":null},{"id":1851934,"type":"A","name":"floatingpoint.io","data":"178.62.198.200","priority":null,"port":null,"weight":null},{"id":1851939,"type":"CNAME","name":"www","data":"@","priority":null,"port":null,"weight":null},{"id":1929343,"type":"MX","name":"@","data":"aspmx.l.google.com","priority":1,"port":null,"weight":null},{"id":1929344,"type":"MX","name":"@","data":"alt1.aspmx.l.google.com","priority":5,"port":null,"weight":null},{"id":1929345,"type":"MX","name":"@","data":"alt2.aspmx.l.google.com","priority":5,"port":null,"weight":null},{"id":1929346,"type":"MX","name":"@","data":"aspmx2.googlemail.com","priority":10,"port":null,"weight":null},{"id":1929347,"type":"MX","name":"@","data":"aspmx3.googlemail.com","priority":10,"port":null,"weight":null},{"id":3671318,"type":"CNAME","name":"jabber","data":"@","priority":null,"port":null,"weight":null},{"id":3671325,"type":"SRV","name":"_xmpp-client._tcp","data":"jabber","priority":0,"port":5222,"weight":5},{"id":3671326,"type":"SRV","name":"_xmpp-server._tcp","data":"jabber","priority":0,"port":5269,"weight":5},{"id":5529034,"type":"CNAME","name":"structuredmind","data":"@","priority":null,"port":null,"weight":null},{"id":6232286,"type":"A","name":"office","data":"93.136.62.55","priority":null,"port":null,"weight":null}],"links":{},"meta":{"total":16}}'
+    http_version:
+  recorded_at: Thu, 16 Apr 2015 19:29:20 GMT
+- request:
+    method: post
+    uri: https://api.digitalocean.com/v2/domains/floatingpoint.io/records
+    body:
+      encoding: UTF-8
+      string: '{"type":"A","name":"foo","data":"127.0.1.1","priority":null,"port":null,"weight":null}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 740ed6dd3e97e498892b2c2d0fd74376dc259c2b4cf898b168fbaa650171b732
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 16 Apr 2015 19:29:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9a857770dc4aca53f30819ba4871437d1429212561; expires=Fri, 15-Apr-16
+        19:29:21 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Status:
+      - 201 Created
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4998'
+      Ratelimit-Reset:
+      - '1429216160'
+      Etag:
+      - '"154a5bdcde3e91c31f170b4680f057b6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3bbcd5f5-d1e8-490f-b6e8-7d431a563aa3
+      X-Runtime:
+      - '0.269614'
+      Cf-Ray:
+      - 1d824c6b973f0a3c-VIE
+    body:
+      encoding: UTF-8
+      string: '{"domain_record":{"id":6261986,"type":"A","name":"foo","data":"127.0.1.1","priority":null,"port":null,"weight":null}}'
+    http_version:
+  recorded_at: Thu, 16 Apr 2015 19:29:22 GMT
+recorded_with: VCR 2.9.3

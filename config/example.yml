@@ -1,0 +1,4 @@
+dns_service: 'DigitalOcean' # [DigitalOcean|Linode]
+dns_token: 'your access token from DNS service'
+domain: 'foobar.example.com'
+interval: 300 # refresh interval in seconds, defaults to 5 minutes
