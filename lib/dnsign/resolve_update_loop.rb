@@ -15,7 +15,7 @@ module Dnsign
       @dns_service = dns_service
       @timers      = Timers::Group.new
 
-      @verbose     = opts[:verbose]  || true
+      @verbose     = opts[:verbose].nil? ? true : opts[:verbose]
       @interval    = opts[:interval] || 300
     end
 
@@ -57,7 +57,7 @@ module Dnsign
     def update_dns_ip(real_ip)
       @dns_service.update_ip @domain, real_ip
     rescue DomainDoesNotExists => e
-        log e
+      log e
     end
 
     def log(msg)

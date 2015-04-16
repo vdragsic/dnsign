@@ -1,0 +1,8 @@
+language: ruby
+script:
+  - "bundle exec rspec spec"
+notifications:
+  recipients:
+    - veljko@floatingpoint.io
+rvm:
+  - 2.1.2
