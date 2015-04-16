@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vdragsic/dnsign.svg?branch=master)](https://travis-ci.org/vdragsic/dnsign)
+
 # Dnsign
 
 Dnsign is a dynamic DNS updater.
